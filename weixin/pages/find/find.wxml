@@ -1,0 +1,16 @@
+<view>
+  <view class="item" wx:for="{{list}}" wx:for-index="i" wx:key="0" wx:for-item="item">
+    <view class="item-text"><text>{{item.text}}</text></view>
+    <view class="item-img">
+      <view class="auto-box image-{{item.images.length}}" 
+            wx:for="{{item.images}}" 
+            wx:key="0" wx:for-item="img" 
+            bindtap="viewImages" 
+            data-urls="{{item.images}}" data-current="{{img}}">
+        <image src="{{img}}" mode="aspectFit" lazy-load></image>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{loading}}">{{loadingTxt}}</view>
+  <view class="loading" wx:if="{{error}}">网络请求失败，<label bindtap='getWord'>点击刷新</label></view>
+</view>

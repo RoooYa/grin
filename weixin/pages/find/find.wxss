@@ -1,0 +1,2 @@
+/* @import "../../style/list.wxss"; */
+@import "../../style/item.wxss";

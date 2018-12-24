@@ -1,0 +1,5 @@
+@import "../../../style/list.wxss";
+
+.v-list .item .act {
+  color: #ffb400;
+}

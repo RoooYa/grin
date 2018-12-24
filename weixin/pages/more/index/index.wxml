@@ -1,0 +1,15 @@
+<view class="v-list">
+  <view class="item">
+    <navigator url="../star/star">
+      <label class="iconfont"></label>
+      明星趣味GIF<icon class='iconfont icon-right'></icon>
+      <image class="img" src="https://i01piccdn.sogoucdn.com/748c1d7771a0e7b5"></image>
+    </navigator>
+  </view>
+  <view class="item">
+    <navigator url="../../second/second">
+      <label class="iconfont"></label>
+      挑战10秒<icon class='iconfont icon-right'></icon>
+    </navigator>
+  </view>
+</view>

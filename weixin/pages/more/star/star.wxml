@@ -1,0 +1,14 @@
+<view class="search">
+  <icon class='iconfont icon-search'></icon>
+  <input placeholder="搜索" bindconfirm="bindconfirm" confirm-type="search" placeholder-style="color:#bbb"/>
+</view>
+
+<view class="content">
+  <view class="hd">热门推荐</view>
+  <view class="bd">
+    <view class='item' wx:for="{{list}}" wx:key="0" wx:for-item="item">
+      <image mode="aspectFill"  src="{{item.icon}}"></image>
+      <navigator url="../stardetails/stardetails?name={{item.name}}">{{item.name}}</navigator>
+    </view>
+  </view>
+</view>

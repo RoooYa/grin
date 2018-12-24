@@ -1,0 +1,17 @@
+@import "../../style/list.wxss";
+
+.head {
+  text-align: center;
+  background:#fff;
+}
+.user-img {
+  padding: 20px 0 10px 0;
+}
+.user-img image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.user-name {
+  padding: 0 0 20px 0;
+}

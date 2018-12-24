@@ -1,0 +1,12 @@
+.bd {
+  overflow: hidden;
+}
+.bd .left {
+  float: left;
+  width: 50%;
+}
+
+.bd .right image, .bd .left image {
+  width: 100%;
+  height: 200px;
+}

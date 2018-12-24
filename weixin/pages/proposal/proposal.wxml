@@ -1,0 +1,7 @@
+<view style="padding: 10px">
+  <textarea placeholder="写下您的意见或建议吧" value="{{text}}" bindblur="blur" ></textarea>
+  <view class="text">
+  1.所有内容均来自互联网，如有侵权，请告知
+  </view>
+  <button bindtap='ok' loading="{{loading}}">提交</button>
+</view>

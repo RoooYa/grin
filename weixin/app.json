@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/details/details",
+    "pages/find/find",
+    "pages/my/my",
+    "pages/myCollection/index",
+    "pages/proposal/proposal",
+    "pages/about/about",
+    "pages/second/second",
+    "pages/more/index/index",
+    "pages/more/star/star",
+    "pages/more/stardetails/stardetails"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#303030",
+    "navigationBarTitleText": "超级会搞笑",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#ffb400",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_sel.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "动图",
+        "iconPath": "image/hot.png",
+        "selectedIconPath": "image/hot_sel.png"
+      },
+      {
+        "pagePath": "pages/more/index/index",
+        "text": "发现",
+        "iconPath": "image/find.png",
+        "selectedIconPath": "image/find_sel.png"
+      },
+    
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my_sel.png"
+      }
+    ]
+  }
+}

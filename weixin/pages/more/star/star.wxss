@@ -1,0 +1,53 @@
+page {
+  background: #fff;
+}
+.search {
+  padding: 10px;
+  position: relative;
+}
+.search icon {
+  position: absolute;
+  left:20px;
+  top:10px;
+  z-index:4;
+  color: #bbb;
+}
+.search input {
+  border: solid #ddd 1px;
+  padding: 5px 5px 5px 30px;
+  border-radius: 20px;
+}
+
+.content {
+  padding: 0 10px 10px 10px;
+}
+
+.content .hd {
+  margin-bottom: 10px;
+  color: #ffb400;
+}
+.content .bd {
+  
+}
+.content .bd .item {
+  float:left;
+  position: relative;
+  width: 33.33%;
+  height: 80px;
+}
+
+.content .bd image {
+  height: 100%;
+  width: 100%;
+}
+
+.content .bd .item navigator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 80px;
+  background: rgba(0, 0, 0, .4);
+}

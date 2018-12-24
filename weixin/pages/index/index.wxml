@@ -1,0 +1,58 @@
+<view>
+  <view class="item" wx:for="{{list}}" wx:for-index="i" wx:key="0" wx:for-item="item">
+    <view class="item-text"><text>{{item.text}}</text></view>
+    <view class="item-img" wx:if="{{item.images.length}}">
+      <view class="auto-box image-{{item.images.length}}" 
+            wx:for="{{item.images}}" 
+            wx:key="0" wx:for-item="img" 
+            bindtap="viewImages" 
+            data-urls="{{item.images}}" data-current="{{img}}">
+        <image src="{{img}}" mode="{{item.images.length === 1 ? 'aspectFit' : 'aspectFill'}}" lazy-load></image>
+      </view>
+    </view>
+    <view wx:if="{{item.video}}" class="item-video">
+      <view wx:if="{{!item.isVideo}}" bindtap='videoPay' data-index="{{i}}">
+        <image wx:if="{{item.poster}}" src="{{item.poster}}" mode="aspectFit"></image>
+        <label class="pay-icon"></label>
+      </view>
+      <video wx:else src="{{item.video}}" direction="0" autoplay></video>
+    </view>
+    <view class="item-ft">
+      <view class="box-icon" data-id="{{item.id}}" data-index="{{i}}" data-key="link" bindtap='push'>
+        <view wx:if="{{!link[item.id]}}">
+          <label class="iconfont icon-appreciate"></label>
+          <text>{{item.link}}</text>
+        </view>
+        <view wx:else class="act">
+          <label class="iconfont icon-appreciatefill"></label>
+          <text>{{item.link}}</text>
+        </view>
+      </view>
+      <view class="box-icon" data-id="{{item.id}}" data-index="{{i}}" data-key="collection" bindtap='push'>
+        <view wx:if="{{!collection[item.id]}}">
+          <label class="iconfont icon-favor"></label>
+          <text>{{item.collection}}</text>
+        </view>
+        <view wx:else class="act">
+          <label class="iconfont icon-favorfill"></label>
+          <text>{{item.collection}}</text>
+        </view>
+      </view>
+      <!-- <view class="box-icon" hover-class="box-hover">
+        <navigator url="../details/details?id={{item.id}}" hover-class="box-hover">
+          <label class="iconfont icon-comment"></label>
+          <text></text>
+        </navigator>
+      </view> -->
+      <view class="box-icon" hover-class="box-hover" style="width:auto">
+        <label for="share-{{item.id}}" >
+          <label class="iconfont icon-share"></label>
+          <text>{{item.send}}</text>
+          <button id="share-{{item.id}}" open-type="share" style="display:none" data-imgUrl="{{item.images}}" data-title="{{item.text}}" data-id="{{item.id}}">分享</button>
+        </label>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{loading}}">{{loadingTxt}}</view>
+  <view class="loading" wx:if="{{error}}">网络请求失败，<label bindtap='getWord'>点击刷新</label></view>
+</view>

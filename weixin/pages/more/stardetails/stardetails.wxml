@@ -1,0 +1,7 @@
+<view class="bd">
+  <view class="left" wx:for="{{list}}" wx:key="0" wx:for-item="item">
+    <image lazy-load="true" bindtap="viewImages" data-current="{{item.imagesBig}}"  src='{{item.images}}' mode="aspectFill"></image>
+  </view>
+</view>
+<view class="loading" wx:if="{{loading}}">{{loadingTxt}}</view>
+<view class="loading" wx:if="{{error}}">网络请求失败，<label bindtap='getWord'>点击刷新</label></view>

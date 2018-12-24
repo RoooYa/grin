@@ -1,0 +1,21 @@
+<view wx:if="{{result === null}}">
+  <view class="number">
+    {{text}}
+  </view>
+  <view class="start" bindtouchstart='start' wx:if="{{!go}}">开始</view>
+  <view class="start end" bindtouchstart='end' wx:else>停止</view>
+  <view class="info" bindtap='getInfo'>查看规则</view>
+</view>
+
+<view class="result" wx:if="{{result !== null}}">
+  <view wx:if="{{result === false}}"><image src='../../image/error.png'></image></view>
+  <view wx:if="{{result === true}}"><image src='../../image/cg.png'></image></view>
+  <view style='padding-top: 20px'>本次成绩<label>{{text}}</label></view>
+  <view wx:if="{{result === false}}">挑战失败</view>
+  <view wx:if="{{result === true}}">挑战成功</view>
+  <view wx:if="{{result === false}}" style="font-size:24px; padding-top:15px;">
+    <label>离成功只差{{difference}}秒</label>
+  </view>
+  <view style='padding-top: 20px;'><button class="btn" bindtap='startTo'>继续挑战</button></view>
+  <view style='padding-top: 20px;'><button class="btn" open-type="share" style="background:#fff;color:#333">邀请小伙伴挑战</button></view>
+</view>
